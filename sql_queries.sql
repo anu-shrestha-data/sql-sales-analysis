@@ -1,6 +1,8 @@
 sql_queries.sql
 
 --Project: Sales Data Analysis Using SQL
+--Author: Anu Shrestha
+--Description: SQL queries used to analyze sales data categoryand region.
 
 --1. Show all sales values 
 SELECT Sales
@@ -40,4 +42,5 @@ GROUP By Region;
 SELECT Category, COUNT(*) AS Order_Count
 FROM Orders
 GROUP By Category;
+
 
