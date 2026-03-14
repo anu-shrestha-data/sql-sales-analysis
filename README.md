@@ -3,6 +3,14 @@
 ## Project Overview
 This project explores and analyzes sales data using SQL to uncover insights related to regional performance, product categories, and overall sales trends. The objective is to practice SQL querying techniques while deriving meaningful business insights from transactional sales data.
 
+## Data Set 
+The dataset used in this project contains sales transaction data with the following fields:
+- Order_Id
+- Region
+- Category
+- Sales
+The dataset represents customer purchase transactions and is used to analyze regional performance and product category trends.
+
 ## Tools Used 
 - SQL
 - GitHub
@@ -35,6 +43,18 @@ SELECT region, SUM(sales) AS total_sales
 FROM orders
 GROUP BY region
 ORDER BY total_sales DESC;
+This query shows total sales per region from highest to lowest.
+
+SELECT region, COUNT(*) AS Total_orders
+FROM orders
+GROUP BY region
+ORDER BY Total_orders DESC;
+This query sorts regions from higheest sales to lowest.
+
+SELECT region, AVG(sales) AS average_sales
+FROM orders
+GROUP BY region
+This query shows average sales per region.
 
 ## Key Insights 
 - Some regions generate significantly higher sales than others.
