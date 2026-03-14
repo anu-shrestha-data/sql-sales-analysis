@@ -39,27 +39,31 @@ The dataset represents customer purchase transactions and is used to analyze reg
 - What is the average sales value per region?
 - How many orders are there in each category?
 
-## Example SQL Query 
+## Example SQL Queries
+```
 SELECT region, SUM(sales) AS total_sales
 FROM orders
 GROUP BY region
 ORDER BY total_sales DESC;
+```
 
-This query shows total sales per region from highest to lowest.
+Explanation:
+This query calculates total sales per region and sorts them from highest to lowest.
 
-
+```
 SELECT region, COUNT(*) AS Total_orders
 FROM orders
 GROUP BY region
 ORDER BY Total_orders DESC;
+```
+Explanation:
+This query sorts the number of orders in each region and sorts them from highest sales to lowest.
 
-This query sorts regions from highest sales to lowest.
-
-
+```
 SELECT region, AVG(sales) AS average_sales
 FROM orders
-GROUP BY region
-
+GROUP BY region;
+```
 This query shows average sales per region.
 
 ## Key Insights 
