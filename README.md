@@ -47,12 +47,14 @@ ORDER BY total_sales DESC;
 
 This query shows total sales per region from highest to lowest.
 
+
 SELECT region, COUNT(*) AS Total_orders
 FROM orders
 GROUP BY region
 ORDER BY Total_orders DESC;
 
-This query sorts regions from higheest sales to lowest.
+This query sorts regions from highest sales to lowest.
+
 
 SELECT region, AVG(sales) AS average_sales
 FROM orders
